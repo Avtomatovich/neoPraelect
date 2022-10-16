@@ -6,11 +6,19 @@ public class Professor {
     private String instructor;
     private String location;
     private String officeHours;
+    private String[] profArray;
+
+    public Professor() {
+        instructor = "NA";
+        location = "NA";
+        officeHours = "NA";
+    }
 
     public Professor(String instructor, String location, String officeHours) {
         this.instructor = instructor;
         this.location = location;
         this.officeHours = officeHours;
+        profArray = new String[]{instructor, location, officeHours};
     }
 
     public void setInstructor(String instructor) {
@@ -35,6 +43,10 @@ public class Professor {
 
     public String getOfficeHours() {
         return officeHours;
+    }
+
+    public String[] getProfArray() {
+        return profArray;
     }
 
     @NonNull

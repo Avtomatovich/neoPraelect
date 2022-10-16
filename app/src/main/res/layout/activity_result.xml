@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="125dp">
+    android:layout_height="200dp">
 
 
     <TextView
-        android:id="@+id/courseCode"
+        android:id="@+id/professorName"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -20,11 +20,11 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/courseTitle"
+        android:id="@+id/officeHours"
         android:layout_width="195dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/courseCode"
-        android:layout_alignEnd="@+id/courseCode"
+        android:layout_below="@+id/professorName"
+        android:layout_alignEnd="@+id/professorName"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="5dp"
         android:fontFamily="@font/allerta"
@@ -33,14 +33,14 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/profName"
+        android:id="@+id/locations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/courseTitle"
+        android:layout_below="@+id/officeHours"
         android:layout_marginStart="-100dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="20dp"
-        android:layout_toEndOf="@id/courseCode"
+        android:layout_toEndOf="@id/professorName"
         android:fontFamily="@font/allerta"
         android:gravity="right"
         android:text="@string/app_name"
@@ -48,7 +48,7 @@
 
 
     <TextView
-        android:id="@+id/border2"
+        android:id="@+id/border3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_alignParentBottom="true"
