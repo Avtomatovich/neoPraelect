@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">neoPraelect</string>
     <string name="wel_icon_desc">Main Logo</string>
-    <string name="wel_text"><![CDATA[T A P   T O   E N T E R]]></string>
+    <string name="wel_text"><![CDATA[T A P    T O    E N T E R]]></string>
     <string name="course_menu_bgd_desc">Course Menu Background</string>
 </resources>

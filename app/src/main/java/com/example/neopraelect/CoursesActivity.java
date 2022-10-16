@@ -12,3 +12,4 @@ public class CoursesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_courses);
     }
 }
+
