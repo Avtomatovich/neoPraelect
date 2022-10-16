@@ -41,6 +41,6 @@ public class Course {
     @NonNull
     @Override
     public String toString() {
-        return code + " " + title + " " + professor.toString();
+        return code + " " + title + " " + professor.getInstructor();
     }
 }

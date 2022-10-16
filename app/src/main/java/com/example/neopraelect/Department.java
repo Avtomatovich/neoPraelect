@@ -1,9 +1,10 @@
 package com.example.neopraelect;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Department {
-    private LinkedList<Course> courseList;
+    private ArrayList<Course> courseList;
 
     public void setCourse(Course course) {
         courseList.add(course);
@@ -13,7 +14,7 @@ public class Department {
         return courseList.get(i);
     }
 
-    public LinkedList<Course> getCourseList() {
+    public ArrayList<Course> getCourseList() {
         return courseList;
     }
 }
