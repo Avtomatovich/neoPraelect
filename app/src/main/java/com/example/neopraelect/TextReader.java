@@ -1,14 +1,10 @@
 package com.example.neopraelect;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Scanner;
 
 public class TextReader {
     public Department reader(String fileName) {
@@ -22,6 +18,7 @@ public class TextReader {
                 int code = Integer.parseInt(strArray[0].replace("CSC ", ""));
                 dept.setCourse(new Course(code, strArray[1], new Professor(strArray[2], strArray[3], strArray[4])));
             }
+            buffRead.close();
         } catch (FileNotFoundException e) {
             System.out.println(fileName);
             System.err.println("File not found");

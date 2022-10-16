@@ -1,6 +1,5 @@
 package com.example.neopraelect;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.LinkedList;
 
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.CourseViewHolder> {
-    private LinkedList<Course> courseList;
-    private RecyclerViewClickListener listener;
+    private final LinkedList<Course> courseList;
+    private final RecyclerViewClickListener listener;
 
     public RecycleAdapter(LinkedList<Course> courseList, RecyclerViewClickListener listener) {
         this.courseList = courseList;
@@ -21,9 +20,9 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.CourseVi
     }
 
     public class CourseViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView courseCode;
-        private TextView courseTitle;
-        private TextView profName;
+        private final TextView courseCode;
+        private final TextView courseTitle;
+        private final TextView profName;
 
         public CourseViewHolder(final View view) {
             super(view);

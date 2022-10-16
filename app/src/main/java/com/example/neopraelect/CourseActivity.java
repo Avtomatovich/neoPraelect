@@ -23,8 +23,7 @@ public class CourseActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         courseList = input();
         // TextReader read = new TextReader();
-        // courseList = read.reader("C:\\file.txt").getCourseList();
-
+        // courseList = read.reader("CS_Department_Office_Hours.csv").getCourseList();
         setAdapter();
     }
 
@@ -60,7 +59,7 @@ public class CourseActivity extends AppCompatActivity {
         list.add(new Course(241, "Intro to Computational Neuroscience", new Professor("Ralf Haefner", "Appt", "rhaefne2@ur.rochester.edu")));
         list.add(new Course(171, "Introduction to Computer Science", new Professor("Adam Purtee", "Wegmans Hall 2109", "MW 2:00-3:00, R 3:30-4:30")));
         list.add(new Course(246, "Machine Learning", new Professor("Adam Purtee", "Wegmans Hall 2109", "MW 2:00-3:00, R 3:30-4:30")));
-         list.add(new Course(257, "Computer Networks", new Professor("Adam Purtee", "Wegmans Hall 2109", "MW 2:00-3:00, R 3:30-4:30")));
+        list.add(new Course(257, "Computer Networks", new Professor("Adam Purtee", "Wegmans Hall 2109", "MW 2:00-3:00, R 3:30-4:30")));
         list.add(new Course(173, "Computation & Formal Systems", new Professor("George Ferguson", "Wegmans Hall 2103", "T 1:00-2:00, W 3:30-4:30")));
         list.add(new Course(242, "Introduction to Artificial Intelligence", new Professor("George Ferguson", "Wegmans Hall 2103", "T 1:00-2:00, W 3:30-4:30")));
         list.add(new Course(212, "Human-Computer Interaction", new Professor("Ehsan Hoque", "Wegmans Hall 3103", "MW 12:00-1:00")));

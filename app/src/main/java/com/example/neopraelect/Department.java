@@ -1,8 +1,6 @@
 package com.example.neopraelect;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Department {
     private LinkedList<Course> courseList;
