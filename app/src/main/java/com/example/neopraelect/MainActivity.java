@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         nextScr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
+                Intent intent = new Intent(MainActivity.this, CourseActivity.class);
                 startActivity(intent);
             }
         });

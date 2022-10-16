@@ -1,55 +1,58 @@
 package com.example.neopraelect;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyViewHolder> {
-    private final ArrayList<Course> coursesList;
+public class RecycleAdapter extends RecyclerView.Adapter<CourseViewHolder> {
+    private final ArrayList<Course> courseList;
+    private Context context;
+    private ClickListen listen;
 
-    public RecycleAdapter(ArrayList<Course> coursesList) {
-        this.coursesList = coursesList;
-    }
-
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView courseCode;
-        private TextView courseTitle;
-        private TextView profName;
-
-        public MyViewHolder(final View view) {
-            super(view);
-            courseCode = view.findViewById(R.id.courseCode);
-            courseTitle = view.findViewById(R.id.courseTitle);
-            profName = view.findViewById(R.id.profName);
-        }
+    public RecycleAdapter(ArrayList<Course> courseList, Context context, ClickListen listen) {
+        this.courseList = courseList;
+        this.context = context;
+        this.listen = listen;
     }
 
     @NonNull
     @Override
-    public RecycleAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_courses, parent, false);
-        return new MyViewHolder(itemView);
+    public CourseViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_card, parent, false);
+        return new CourseViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecycleAdapter.MyViewHolder holder, int position) {
-        String courseCode = "CSC " + coursesList.get(position).getCode();
-        String courseTitle = coursesList.get(position).getTitle();
-        String profName = coursesList.get(position).getProfessor().getInstructor();
+    public void onBindViewHolder(@NonNull final CourseViewHolder holder, final int position) {
+        final int index = holder.getAdapterPosition();
+        String courseCode = "CSC " + courseList.get(position).getCode();
+        String courseTitle = courseList.get(position).getTitle();
+        String profName = courseList.get(position).getProfessor().getInstructor();
 
         holder.courseCode.setText(courseCode);
         holder.courseTitle.setText(courseTitle);
         holder.profName.setText(profName);
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listen.click(index);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return coursesList.size();
+        return courseList.size();
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 }
