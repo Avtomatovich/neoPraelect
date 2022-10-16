@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="125dp">
+    android:layout_height="125dp"
+    android:backgroundTintMode="add">
 
 
     <TextView
@@ -17,7 +18,7 @@
         android:maxLines="1"
         android:text="@string/app_name"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/courseTitle"
@@ -39,7 +40,7 @@
         android:layout_below="@+id/courseTitle"
         android:layout_marginStart="-100dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="25dp"
         android:layout_toEndOf="@id/courseCode"
         android:fontFamily="@font/allerta"
         android:gravity="right"
@@ -54,5 +55,5 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
-        android:background="#808080" />
+        android:background="#000000" />
 </RelativeLayout>
